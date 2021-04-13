@@ -1,3 +1,4 @@
+import path from 'path'
 import { getDependencies } from '../src/pkg'
 
 describe('pkg', () => {
@@ -10,4 +11,19 @@ describe('pkg', () => {
     const deps = await getDependencies()
     expect(deps).toEqual({})
   }) 
+  it('should be able to resolve only devDependencies', async () => {
+    cwdSpy.mockImplementation(() => path.join(__dirname, 'mocks/pkg/devDeps'))
+    const deps = await getDependencies()
+    expect(deps).toEqual({ devDep1: '1.0.0', devDep2: '2.0.0' })
+  })
+  it('should be able to resolve only dependencies', async () => {
+    cwdSpy.mockImplementation(() => path.join(__dirname, 'mocks/pkg/deps'))
+    const deps = await getDependencies()
+    expect(deps).toEqual({ dep1: '1.0.0', dep2: '2.0.0' })
+  })
+  it('should be able to resolve both deps and devDeps', async () => {
+    cwdSpy.mockImplementation(() => path.join(__dirname, 'mocks/pkg/depsAndDevDeps'))
+    const deps = await getDependencies()
+    expect(deps).toEqual({ devDep1: '1.0.0', devDep2: '2.0.0', dep1: '1.0.0', dep2: '2.0.0' })
+  })
 })

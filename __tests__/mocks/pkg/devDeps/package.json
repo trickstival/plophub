@@ -1,0 +1,7 @@
+{
+  "main": "foo.js",
+  "devDependencies": {
+    "devDep1": "1.0.0",
+    "devDep2": "2.0.0"
+  }
+}
