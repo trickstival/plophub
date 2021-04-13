@@ -24,6 +24,6 @@ describe('pkg', () => {
   it('should be able to resolve both deps and devDeps', async () => {
     cwdSpy.mockImplementation(() => path.join(__dirname, 'mocks/pkg/depsAndDevDeps'))
     const deps = await getDependencies()
-    expect(deps).toEqual({ devDep1: '1.0.0', devDep2: '2.0.0', dep1: '1.0.0', dep2: '2.0.0' })
+    expect(deps).toEqual({ 'plophub-pluginfoo': '1.0.0', devDep2: '2.0.0', 'plophub-vue-tests': '1.0.0', dep2: '2.0.0' })
   })
 })

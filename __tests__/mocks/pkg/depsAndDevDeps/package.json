@@ -1,11 +1,11 @@
 {
   "main": "foo.js",
   "dependencies": {
-    "dep1": "1.0.0",
+    "plophub-vue-tests": "1.0.0",
     "dep2": "2.0.0"
   },
   "devDependencies": {
-    "devDep1": "1.0.0",
+    "plophub-pluginfoo": "1.0.0",
     "devDep2": "2.0.0"
   }
 }
