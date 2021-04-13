@@ -1,0 +1,33 @@
+{
+  "include": [
+    "src/**/*.ts",
+    "__tests__/**/*.ts"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "dist",
+    "sourceMap": false,
+    "noEmit": true,
+
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowJs": false,
+
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": false,
+    "strict": true,
+    "isolatedModules": false,
+
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "lib": ["esnext", "dom"],
+    "types": ["jest", "node"]
+  }
+}
