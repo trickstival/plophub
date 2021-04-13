@@ -1,6 +1,11 @@
 import LiftOff from 'liftoff'
-import { resolvePlugins } from './plugins'
+import { loadPlugins, resolvePlugins } from './plugins'
 
-export default (plop: LiftOff) => {
-  const plugins = resolvePlugins()
+
+export default async (plop: LiftOff) => {
+  const pluginsNames = await resolvePlugins()
+  const plugins = await loadPlugins(pluginsNames)
+  for (const plugin of plugins) {
+    plugin(plop)
+  }
 }

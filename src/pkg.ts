@@ -1,13 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-
-function fileExists(filepath: string){
-  return new Promise((resolve) => {
-    fs.access(filepath, fs.constants.F_OK, error => {
-      resolve(!error)
-    })
-  })
-}
+import { fileExists } from './fsUtils'
 
 interface Pkg {
   dependencies: Record<string, string>,

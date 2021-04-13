@@ -1,3 +1,4 @@
 node_modules
+!__tests__/mocks/pkg/depsAndDevDeps/node_modules
 coverage
 

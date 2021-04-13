@@ -14,7 +14,7 @@ describe('pkg', () => {
   it('should be able to resolve only devDependencies', async () => {
     cwdSpy.mockImplementation(() => path.join(__dirname, 'mocks/pkg/devDeps'))
     const deps = await getDependencies()
-    expect(deps).toEqual({ devDep1: '1.0.0', devDep2: '2.0.0' })
+    expect(deps).toEqual({ 'plophub-devDep1': '1.0.0', devDep2: '2.0.0' })
   })
   it('should be able to resolve only dependencies', async () => {
     cwdSpy.mockImplementation(() => path.join(__dirname, 'mocks/pkg/deps'))
