@@ -9,6 +9,9 @@
     "outDir": "dist",
     "sourceMap": false,
     "noEmit": true,
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "dist/types",
 
     "target": "esnext",
     "module": "esnext",
