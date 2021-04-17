@@ -1,7 +1,7 @@
 import path from 'path'
 import plophub from '../src'
 
-describe('plugins', () => {
+describe('plophub', () => {
   let cwdSpy = jest.spyOn(process, 'cwd')
   cwdSpy.mockImplementation(() => __dirname)
   afterAll(() => {
