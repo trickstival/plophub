@@ -1,6 +1,6 @@
 {
   "name": "plophub",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A hub for you to publish your plop templates and files",
   "main": "src/index.ts",
   "author": "trickstival",
