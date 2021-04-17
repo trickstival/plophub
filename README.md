@@ -1,5 +1,9 @@
 # Plophub
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/trickstival/plophub/test)
+![npm](https://img.shields.io/npm/v/plophub)
+![Codecov](https://img.shields.io/codecov/c/github/trickstival/plophub)
+
 > Install Plopfiles from npm
 
 - 💻 Share your own plopfiles with other users
