@@ -38,6 +38,6 @@ when `plop` is run
 ## Roadmap
 
 - [x] Load `plophub-<plugin name>` packages automaticaly
-- [] Create plophub marketplace cli
-- [] Provide custom plugin options API
+- [ ] Create plophub marketplace cli
+- [ ] Provide custom plugin options API
 
