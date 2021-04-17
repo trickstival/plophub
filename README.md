@@ -5,7 +5,7 @@
 - 💻 Share your own plopfiles with other users
 - ⚙️  Install popular plopfiles from npm
 
-## Install
+## 🏗  Install
 
 ```sh
 npm install -D plophub
@@ -13,7 +13,7 @@ npm install -D plophub
 yarn add -D plophub
 ```
 
-## Configuring
+## 🚀 Setup
 
 Add plophub to your plopfile
 
@@ -22,10 +22,22 @@ Add plophub to your plopfile
 const plophub = require('plophub')
 
 module.exports = (plop) => {
-    plophub(plop)
-    plop.setGenerator('Vue test file', {
-      // ...
-    });
+  // Loading plugins
+  plophub(plop)
+
+  Your custom plop generators
+  plop.setGenerator('Vue test file', {
+    // ...
+  });
 };
 ```
+
+Now all packages that start with `plophub-` are loaded automatically
+when `plop` is run
+
+## Roadmap
+
+- [x] Load `plophub-<plugin name>` packages automaticaly
+- [] Create plophub marketplace cli
+- [] Provide custom plugin options API
 
