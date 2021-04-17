@@ -39,9 +39,9 @@ module.exports = (plop) => {
 Now all packages that start with `plophub-` are loaded automatically
 when `plop` is run
 
-## Roadmap
+## 🗺 Roadmap
 
 - [x] Load `plophub-<plugin name>` packages automaticaly
 - [ ] Create plophub marketplace cli
-- [ ] Provide custom plugin options API
+- [ ] Provide custom plugin options API through plophub.js
 
