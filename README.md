@@ -8,9 +8,9 @@
 ## Install
 
 ```sh
-npm install plophub
+npm install -D plophub
 # or
-yarn add plophub
+yarn add -D plophub
 ```
 
 ## Configuring
@@ -19,7 +19,7 @@ Add plophub to your plopfile
 
 ```js
 // plopfile.js
-import plophub from 'plophub'
+const plophub = require('plophub')
 
 module.exports = (plop) => {
     plophub(plop)
