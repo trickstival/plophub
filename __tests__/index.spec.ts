@@ -8,13 +8,18 @@ describe('plugins', () => {
     jest.clearAllMocks()
   })
 
-  it('should be able to resolve both deps and devDeps', async () => {
+  it('should be able to resolve both deps and devDeps', () => {
     cwdSpy.mockImplementation(() => path.join(__dirname, 'mocks/pkg/depsAndDevDeps'))
     const plopMock = {
-      setGenerator: jest.fn()
+      setGenerator: jest.fn(),
+      load: jest.fn((plugins: string[]) => {
+        for (const plugin of plugins) {
+          require(`./mocks/pkg/depsAndDevDeps/node_modules/${plugin}`)(plopMock)
+        }
+      })
     }
     // @ts-ignore
-    await plophub(plopMock)
+    plophub(plopMock)
     expect(plopMock.setGenerator).toHaveBeenCalledTimes(2)
     expect(plopMock.setGenerator).toHaveBeenCalledWith('controller', {
         description: 'application controller logic',
@@ -29,13 +34,6 @@ describe('plugins', () => {
             templateFile: 'plop-templates/controller.hbs'
         }]
     })
-  })
-  
-  it('should throw an error if no package.json is found', async () => {
-    cwdSpy.mockImplementation(() => path.join(__dirname, 'mocks/pkg/devDeps'))
-    // @ts-ignore
-    const rej = await expect(plophub({})).rejects.toEqual(new Error(
-     'plugin devDep1 does not contain a package.json'
-    ))
+    expect(plopMock.load).toHaveBeenCalledWith(['plophub-vue-tests', 'plophub-pluginfoo'])
   })
 })

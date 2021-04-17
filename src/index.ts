@@ -1,11 +1,15 @@
-import LiftOff from 'liftoff'
-import { loadPlugins, resolvePlugins } from './plugins'
+import { resolvePlugins } from './plugins'
 
+interface PlopCfg {
+	force: boolean;
+	destBasePath: string;
+}
 
-export default async (plop: LiftOff) => {
-  const pluginsNames = await resolvePlugins()
-  const plugins = await loadPlugins(pluginsNames)
-  for (const plugin of plugins) {
-    plugin(plop)
-  }
+interface Plop {
+  load(target: string[] | string, loadCfg?: PlopCfg, includeOverride?: boolean): void;
+}
+
+export default (plop: Plop) => {
+  const pluginsNames = resolvePlugins()
+  plop.load(pluginsNames)
 }
