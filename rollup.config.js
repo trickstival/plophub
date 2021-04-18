@@ -1,4 +1,5 @@
 import typescript from '@rollup/plugin-typescript'
+import json from '@rollup/plugin-json'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import hashbang from 'rollup-plugin-hashbang'
 
@@ -22,14 +23,15 @@ export default [
     output: {
       file: 'dist/cli.js',
       format: 'cjs',
-      exports: 'default'
+      // exports: 'default'
     },
     plugins: [
       typescript({
         exclude: '__tests__/**/*'
       }),
       nodeResolve(),
-      hashbang()
+      hashbang(),
+      json()
     ]
   }
 ]
