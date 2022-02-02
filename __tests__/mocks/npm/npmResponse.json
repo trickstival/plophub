@@ -1,0 +1,73 @@
+{
+  "objects": [
+    {
+      "package": {
+        "name": "plophub",
+        "scope": "unscoped",
+        "version": "0.0.4",
+        "description": "A hub for you to publish your plop templates and files",
+        "date": "2021-04-17T18:27:17.981Z",
+        "links": {
+          "npm": "https://www.npmjs.com/package/plophub"
+        },
+        "author": {
+          "name": "trickstival"
+        },
+        "publisher": {
+          "username": "trickstival",
+          "email": "trick_stival@hotmail.com"
+        },
+        "maintainers": [
+          {
+            "username": "trickstival",
+            "email": "trick_stival@hotmail.com"
+          }
+        ]
+      },
+      "flags": {
+        "unstable": true
+      },
+      "score": {
+        "final": 0.3170950536985227,
+        "detail": {
+          "quality": 0.6844537517762705,
+          "popularity": 0.01874563464941796,
+          "maintenance": 0.30056558868098643
+        }
+      },
+      "searchScore": 100000.27
+    },
+    {
+      "package": {
+        "name": "plophub-silly-example",
+        "scope": "unscoped",
+        "version": "1.0.0",
+        "date": "2021-04-17T14:55:55.326Z",
+        "links": {
+          "npm": "https://www.npmjs.com/package/plophub-silly-example"
+        },
+        "publisher": {
+          "username": "trickstival",
+          "email": "trick_stival@hotmail.com"
+        },
+        "maintainers": [
+          {
+            "username": "trickstival",
+            "email": "trick_stival@hotmail.com"
+          }
+        ]
+      },
+      "score": {
+        "final": 0.19540641274679293,
+        "detail": {
+          "quality": 0.36580144560282196,
+          "popularity": 0.00081761672018467,
+          "maintenance": 0.2439423234682335
+        }
+      },
+      "searchScore": 1.5209194e-8
+    }
+  ],
+  "total": 2,
+  "time": "Wed Feb 02 2022 13:17:43 GMT+0000 (Coordinated Universal Time)"
+}

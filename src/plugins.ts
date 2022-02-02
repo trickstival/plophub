@@ -7,6 +7,7 @@ export function resolvePlugins () {
     .map(dep => dep.match(regex))
     .filter(matches => matches)
     .map(matches => (matches as string[])[0])
+
   return plugins
 }
 

@@ -29,7 +29,7 @@ module.exports = (plop) => {
   // Loading plugins
   plophub(plop)
 
-  Your custom plop generators
+  // Your custom plop generators
   plop.setGenerator('Vue test file', {
     // ...
   });
